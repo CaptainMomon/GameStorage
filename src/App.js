@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [ gameName, setGameName ] = useState();
+
+  const numberOfGames = useSelector( state=> state.numberOfGames);
+  const gameList = useSelector( state => state.gameList);
+
+  const dispatch = useDispatch();
+
+  const getAllGames = () => {
+    
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h2>i like turtles</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Welcome to Game Storage</h1>
     </div>
   );
 }
